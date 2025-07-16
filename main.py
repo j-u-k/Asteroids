@@ -50,6 +50,13 @@ def main():
                     asteroid.split()
                     bullet.kill()
                     
+        if pygame.key.get_pressed()[pygame.K_g]:
+            screen.fill("red")
+            for asteroid in asteroids:
+                asteroid.kill()
+            for bullet in shots:
+                bullet.kill()
+
         pygame.display.flip()
 
         dt = clock.tick(60) / 1000
